@@ -1,5 +1,6 @@
 'use strict';
 const assert = require('assert');
+const jwt = require('jsonwebtoken')
 const collectionName = 'Users';
 const mysql = require('mysql');
 var response = { data: '', totalRecords: 0 };
@@ -35,19 +36,28 @@ const main = function(request, callback){
 		if (err) throw err;
 		console.log("Connected!");
 
-		var usuario = request.query.user;
-		var password= request.query.password;
+		const usuario = request.query.user;
+		const password= request.query.password;
 
 		connection.query('SELECT password0 FROM arcade_usuarios WHERE id='+usuario, function (error, results) {
-			if (error) throw error;
-
-			console.log(password);
-			console.log(results[0].password0);
-			if( password == results[0].password0){
-				response.data = 'si jalo';
+			if (error){ 
+				response.data = err;	
 			}else{
-				response.data = 'no es la password';
-			};
+				if( password == results[0].password0){
+					var token = jwt.sign({ id: usuario }, 'secret', {
+						expiresIn: 86400 // 24 hours
+					});
+					
+					response.data = token;
+					response.totalRecords = 1;
+				}else{
+					response.data = 'No Match';
+					response.totalRecords = 1;
+				};
+
+			}
+
+			
 
 			callback(response);
 		});

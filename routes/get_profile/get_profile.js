@@ -1,17 +1,16 @@
- const joi = require('joi'); 
+const joi = require('joi'); 
 var handler = require('./_'+__filename.split(/[\\/]/).pop()); 
 
 module.exports = { 
 	method: 'get',
-	path: '/login',
+	path: '/get_profile',
 	config: { 
-		description: 'Login - returns authorization token',
-		notes: 'Login - returns authorization token',
+		description: 'Get Profile - returns profile data',
+		notes: 'Get Profile - returns profile data',
 		tags: ['api'],
 		validate: {
 			query: {
-				user: joi.number().required(),
-				password: joi.string().required(),
+				auth: joi.string().required()
 			}
 		}
 	}, handler: async (request, h) => { 

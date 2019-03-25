@@ -1,0 +1,103 @@
+
+nav{
+	height: 40px;
+}
+
+.icon_nav{
+	line-height: 40px !important;
+}
+
+.search{
+	width:50% !important;
+	border-radius: 20px !important;
+	height: 1.75rem !important;
+	margin-left: 25% !important;
+	line-height: 40px !important;
+}
+
+.div_title{
+	border-radius: 3px !important;
+	color: black;
+	}
+
+.div_info{
+	background:white;
+	border-radius: 5px !important;
+
+}	
+
+.button{
+	border-radius: 5px !important;
+	margin-bottom: 10px;
+}	
+
+.padding{
+	padding: 10px !important;
+}
+
+.margin{
+	margin-top: 10px;
+}
+
+.input-field input[type=text]:not(.browser-default) {
+	margin: 0 0 0 0;
+	height: 1.7rem;
+}
+
+.input-field label {
+	color: #333232;
+	font-weight: bold;
+}
+input[type=text]:not(.browser-default):focus:not([readonly]){
+	border-bottom: 1px solid #2196f3;
+    -webkit-box-shadow: 0 1px 0 0 #2196f3;
+    box-shadow: 0 1px 0 0 #2196f3;
+}
+input[type=text].valid:not(.browser-default){
+	border-bottom: 1px solid #2196f3;
+    -webkit-box-shadow: 0 1px 0 0 #2196f3;
+    box-shadow: 0 1px 0 0 #2196f3;
+}
+
+
+input[type=text]:not(.browser-default)[readonly="readonly"]{
+    border-bottom: 2px solid #0089ec;
+}
+input[type=text]:not(.browser-default)[readonly="readonly"]+label {
+	color: #333232;
+}
+
+textarea.materialize-textarea {
+	background-color: rgba(0, 0, 0, 0.17);
+	border-radius: 5px;
+	height: 20vh;
+	max-height: 20vh;
+}
+.phone_box {
+	height: 48vh;
+	max-height: 48vh;
+}
+.phone_box_reduce {
+	height: 33vh;
+	max-height: 33vh;
+}
+
+.input-field .prefix ~ input{
+	width: 100%;
+}
+.input-field .prefix.active{
+	color: #000;
+}
+.expand {
+	height: 40vh;
+	max-height: 40vh;
+}
+.div_height {
+	height: 20vh;
+	max-height: 20vh;
+}
+.tiny {
+	cursor: pointer;
+}
+
+
