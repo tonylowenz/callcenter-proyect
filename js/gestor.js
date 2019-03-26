@@ -25,9 +25,6 @@ $(document).on('ready', function(){
 	    ampmclickable: true, // make AM PM clickable
 	    aftershow: function(){} //Function for after opening timepicker
 	});
-
-
-	
 });
 
 
