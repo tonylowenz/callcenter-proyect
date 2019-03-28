@@ -99,5 +99,13 @@ textarea.materialize-textarea {
 .tiny {
 	cursor: pointer;
 }
-
-
+.input_modal{
+	width: 45% !important;
+}
+.icon_menu{
+    margin-left: 30%;
+}
+.innerb{
+	overflow: auto;
+	height: 12em;
+}

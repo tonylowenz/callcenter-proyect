@@ -5,25 +5,10 @@ $(document).on('ready', function(){
 	$('.tooltipped').tooltip({delay: 50});
 	$('.tooltipped').tooltip({position:"left"});
 	$('.datepicker').pickadate({
-	    selectMonths: true, // Creates a dropdown to control month
-	    selectYears: 15, // Creates a dropdown of 15 years to control year,
-	    today: 'Today',
-	    clear: 'Clear',
-	    close: 'Ok',
-	    closeOnSelect: false // Close upon selecting a date,
-	    container: undefined, // ex. 'body' will append picker to body
+		container:"body"
 	});
 	$('.timepicker').pickatime({
-	    default: 'now', // Set default time: 'now', '1:30AM', '16:30'
-	    fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
-	    twelvehour: false, // Use AM/PM or 24-hour format
-	    donetext: 'OK', // text for done-button
-	    cleartext: 'Clear', // text for clear-button
-	    canceltext: 'Cancel', // Text for cancel-button,
-	    container: undefined, // ex. 'body' will append picker to body
-	    autoclose: false, // automatic close timepicker
-	    ampmclickable: true, // make AM PM clickable
-	    aftershow: function(){} //Function for after opening timepicker
+		container:"body"
 	});
 });
 
@@ -42,10 +27,6 @@ $("#reduce").click( function () {
 });
 
 //Intro Modals
-$("#m_gestiones").on("click", () => {
-	$('#modal_gestiones').modal('open');
-});
-
 $("#m_bancarias").on("click", () => {
 	$('#modal_bancarias').modal('open');
 });
@@ -54,6 +35,9 @@ $("#m_pagos").on("click", () => {
 	$('#modal_pagos').modal('open');
 });
 
+$("#m_agendar").on("click", () => {
+	$('#modal_agendar').modal('open');
+});
 $("#m_agenda").on("click", () => {
 	$('#modal_agenda').modal('open');
 });
@@ -64,10 +48,6 @@ $("#m_visitas").on("click", () => {
 
 $("#m_convenios").on("click", () => {
 	$('#modal_convenios').modal('open');
-});
-
-$("#m_config").on("click", () => {
-	$('#modal_config').modal('open');
 });
 
 $("#m_diarios").on("click", () => {

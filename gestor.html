@@ -16,7 +16,7 @@
 		<div class="container-fluid">
 			<nav class="grey darken-4" >
                     <div class="nav-wrapper icon_nav">
-                    	<a href="#!" class="brand-logo left"><i class="material-icons icon_nav">menu</i></a>
+                    	<a href="#!" class="brand-logo left"><i class="material-icons icon_nav icon_menu">menu</i></a>
                     	<input class="search center-align grey darken-2" type="text" placeholder="Buscar">
 						<ul class="icon_nav right">
 							<li><a href="mobile.html">12:00</a></li>
@@ -36,10 +36,9 @@
 							<li><a id="m_gestiones" class="btn-floating tooltipped grey darken-2 data-delay="50" data-tooltip="Gestiones""><i class="material-icons">picture_in_picture_alt</i></a></li>
 							<li><a id="m_bancarias" class="btn-floating tooltipped grey darken-2 data-delay="50" data-tooltip="Ref Bancarias" "><i class="material-icons">payment</i></a></li>
 							<li><a id="m_pagos" class="btn-floating tooltipped grey darken-2 data-delay="50" data-tooltip="Pagos" "><i class="material-icons">monetization_on</i></a></li>
-							<li><a id="m_agenda" class="btn-floating tooltipped grey darken-2 data-delay="50" data-tooltip="Agenda" "><i class="material-icons">today</i></a></li>
+							<li><a id="m_agendar" class="btn-floating tooltipped grey darken-2 data-delay="50" data-tooltip="Agenda" "><i class="material-icons">today</i></a></li>
 							<li><a id="m_visitas" class="btn-floating tooltipped grey darken-2 data-delay="50" data-tooltip="Visitas" "><i class="material-icons">location_on</i></a></li>
 							<li><a id="m_convenios" class="btn-floating tooltipped grey darken-2 data-delay="50" data-tooltip="Convenios""><i class="material-icons">people</i></a></li>
-							<li><a id="m_config" class="btn-floating tooltipped grey darken-2 data-delay="50" data-tooltip="configuracion" "><i class="material-icons">settings</i></a></li>
 							<li><a  id="m_diarios" class="btn-floating tooltipped grey darken-2 data-delay="50" data-tooltip="Pagos Diarios" "><i class="material-icons">local_atm</i></a></li>
 							<li><a id="m_saldos" class="btn-floating tooltipped  grey darken-2 data-delay="50" data-tooltip="Saldos" "><i class="material-icons">info</i></a></li>
 						</ul>
@@ -155,12 +154,74 @@
 								<i id="expand" class="material-icons tiny">expand_more</i>
 								<i id="reduce" class="material-icons tiny">expand_less</i>
 							</div>
+							<div class="col s12 right-align">
+								<table class="table highlight">
+									<thead>
+										<tr>
+											<th>Fecha</th>
+											<th>Hora</th>
+											<th>Numero</th>
+											<th>Agente</th>
+											<th>Estatus</th>
+											<th>Subestatus</th>
+											<th>Disposicion</th>
+											<th>Tiempo</th>
+										<tr>	
+									</thead>
+									<tbody>
+										<tr>
+											<td colspan="8">
+												<div class="innerb center">
+													<table class="">
+														<tbody>
+															<tr>
+																<td>1</td>
+																<td>2</td>
+																<td>3</td>
+																<td>4</td>
+																<td>5</td>
+																<td>6</td>
+																<td>7</td>
+																<td>8</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>				
 						</div>
 					</div>	
 				</div>
 				<div class="col col s12 m4 l4 padding">
 					<div class="col s12 z-depth-4 div_info phone_box center-align">
-						
+							<div class="col s12 right-align">
+								<table class="table highlight">
+									<thead>
+										<tr>
+											<td><i class="material-icons">android</i></td>
+											<th>telefono</th>
+											<th>Nombre</th>
+										<tr>	
+									</thead>
+									<tbody>
+										<tr>
+											<td colspan="3">
+												<div class="innerb">
+													<table class="table highlight">
+														<tbody>
+															<tr>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
 					</div>
 				</div>
 				<div class="col col s12 m4 l4 padding">
@@ -195,15 +256,6 @@
 				</div>
 			</div>
 			<!-- Inician Modales -->
-			<div id="modal_gestiones" class="modal">
-				<div class="modal-content">
-					<h4>Modal Header</h4>
-					<p>A bunch of text</p>
-				</div>
-				<div class="modal-footer">
-					<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-				</div>
-			</div>
 			<div id="modal_bancarias" class="modal">
 				<div class="modal-content">
 					<h4 class="center">Referencias Bancarias</h4>
@@ -242,22 +294,97 @@
 			</div>
 			<div id="modal_pagos" class="modal">
 				<div class="modal-content">
-					<h4>Modal Header</h4>
-					<p>A bunch of text</p>
-				</div>
-				<div class="modal-footer">
-					<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-				</div>
-			</div>
-			<div id="modal_agenda" class="modal">
-				<div class="modal-content center">
-					<h4>Agenda</h4>
-					<div class="col s12">
-						<input type="text" class="datepicker">
+					<h4 class="center">Pagos</h4>
+					<div class="col l12">
+						<table class="table highlight responsive-table">
+							<thead>
+								<tr>
+									<th>Cuenta</th>
+									<th>Fecha Pago</th>
+									<th>Origen</th>
+									<th>Importe</th>
+									<th>Forma</th>
+									<th>Estatus</th>
+									<th>Fecha Aplicacion</th>
+								<tr>	
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="7">
+										<div class="innerb">
+											<table class="table highlight responsive-table">
+												<tbody>
+													<tr>
+														<td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>					
 					</div>
 				</div>
 				<div class="modal-footer">
-					 <a class="waves-effect waves-light btn"><i class="material-icons left">add_circle</i>Agendar Llamada</a>
+					<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
+				</div>
+			</div>
+			<div id="modal_agendar" class="modal">
+				<div class="modal-content">
+					<h4 class="center">Agendar Llamada</h4>
+					<div class="col l12">
+							<label for="lunch">Dia</label>
+							<input id="lunch" name="fecha" type="text" class="validate datepicker input_modal">
+							<label for="lunch">Hora</label>
+							<input id="lunch" name="fecha" type="text" class="validate timepicker
+							input_modal">
+					</div>
+					<div class="col s12">
+						 <label for="lunch">Motivo</label>
+						<input id="lunch" name="fecha" type="text" class="validate">
+					</div>
+				</div>
+				<div class="modal-footer">
+					 <a id="m_agenda" class="waves-effect waves-light btn blue darken-3 button"><i class="material-icons left"></i>Ver mi agenda</a>
+					 <a class="waves-effect waves-light btn green button">Agendar<i class="material-icons left input_modal center">send</i></a>
+				</div>
+			</div>
+			<div id="modal_agenda" class="modal">
+				<div class="modal-content">
+					<h4 class="center">Mi Agenda</h4>
+					<div class="col l12">
+						<div class="col l12">
+							<table class="table highlight responsive-table">
+								<thead>
+									<tr>
+										<th>Cuenta</th>
+										<th>Dìa</th>
+										<th>Hora</th>
+										<th>Tel y Motivo</th>
+									<tr>	
+								</thead>
+								<tbody>
+									<tr>
+										<td colspan="4">
+											<div class="innerb">
+												<table class="table highlight responsive-table">
+													<tbody>
+														<tr>
+															<td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>					
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					 <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
 				</div>
 			</div>
 			<div id="modal_visitas" class="modal">
@@ -271,26 +398,60 @@
 			</div>
 			<div id="modal_convenios" class="modal">
 				<div class="modal-content">
-					<h4>Modal Header</h4>
-					<p>A bunch of text</p>
+					<h4>Convenios</h4>
+					<div class="col s12 right-align">
+						<table class="table highlight">
+							<thead>
+								<tr>
+									<th>Folio</th>
+									<th>Cuenta</th>
+									<th>Importe PR</th>
+									<th>Resto</th>
+									<th>F.Gestion</th>
+									<th>Plazo</th>
+									<th>F. Promesa</th>
+									<th>Pagado</th>
+									<th>F.Pagado</th>
+									<th>Efect.</th>
+									<th>Aplica</th>
+								<tr>	
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="11">
+										<div class="innerb center">
+											<table class="">
+												<tbody>
+													<tr>
+														<td>1</td>
+														<td>2</td>
+														<td>3</td>
+														<td>4</td>
+														<td>5</td>
+														<td>6</td>
+														<td>7</td>
+														<td>8</td>
+														<td>9</td>
+														<td>10</td>
+														<td>11</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>		
 				</div>
 				<div class="modal-footer">
-					<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-				</div>
-			</div>
-			<div id="modal_config" class="modal">
-				<div class="modal-content">
-					<h4>Modal Header</h4>
-					<p>A bunch of text</p>
-				</div>
-				<div class="modal-footer">
-					<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+					<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
 				</div>
 			</div>
 			<div id="modal_diarios" class="modal">
 				<div class="modal-content">
-					<h4>Modal Header</h4>
-					<p>A bunch of text</p>
+					<h4>Pagos Diarios</h4>
+					
 				</div>
 				<div class="modal-footer">
 					<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
