@@ -17,16 +17,39 @@
 			<nav class="grey darken-4" >
                     <div class="nav-wrapper icon_nav">
                     	<a href="#!" class="brand-logo left"><i class="material-icons icon_nav icon_menu">menu</i></a>
-                    	<input class="search center-align grey darken-2" type="text" placeholder="Buscar">
+                    	<input id="search" class="search center-align grey darken-2" type="text" placeholder="Buscar">
 						<ul class="icon_nav right">
-							<li><a href="mobile.html">12:00</a></li>
-							<li><a href="mobile.html">12:00</a></li>
-							<li><a href="mobile.html">12:00</a></li>
 							<li><a href="mobile.html"><i class="material-icons icon_nav">more_vert</i></a></li>
 						</ul>
                     </div>
                 </nav>
 			<div class="row">
+				<div class="col s12 m12 s12 grey darken-4 marg_control">
+					<div class="input-field col s2 m2 l2">
+						 <input id="icon_prefix" type="text" class="validate" placeholder="" readonly="readonly">
+					     <label for="icon_prefix">P.llamada</label>
+					</div>
+					<div class="input-field col s2 m2 l2">
+						 <input id="icon_prefix" type="text" class="validate" placeholder="" readonly="readonly">
+					     <label for="icon_prefix">Actual</label>
+					</div>
+					<div class="input-field col s2 m2 l2">
+						 <input id="icon_prefix" type="text" class="validate" placeholder="" readonly="readonly">
+					     <label for="icon_prefix">R. Actual</label>
+					</div>
+					<div class="input-field col s2 m2 l2">
+						 <input id="icon_prefix" type="text" class="validate" placeholder="" readonly="readonly">
+					     <label for="icon_prefix">Cuenta</label>
+					</div>
+					<div class="input-field col s2 m2 l2">
+						 <input id="icon_prefix" type="text" class="validate" placeholder="" readonly="readonly">
+					     <label for="icon_prefix" class="centro">Llamadas</label>
+					</div>
+					<div class="input-field col s2 m2 l2">
+						 <input id="icon_prefix" type="text" class="validate" placeholder="" readonly="readonly">
+					     <label for="icon_prefix">Convenios</label>
+					</div>
+				</div>	
 				<div class="col s12 m12 s12">
 					<div class="fixed-action-btn">
 						<a class="btn-floating btn-large red">
@@ -41,6 +64,7 @@
 							<li><a id="m_convenios" class="btn-floating tooltipped grey darken-2 data-delay="50" data-tooltip="Convenios""><i class="material-icons">people</i></a></li>
 							<li><a  id="m_diarios" class="btn-floating tooltipped grey darken-2 data-delay="50" data-tooltip="Pagos Diarios" "><i class="material-icons">local_atm</i></a></li>
 							<li><a id="m_saldos" class="btn-floating tooltipped  grey darken-2 data-delay="50" data-tooltip="Saldos" "><i class="material-icons">info</i></a></li>
+							<li><a id="m_estadisticas" class="btn-floating tooltipped grey darken-2 data-delay="50" data-tooltip="Estadisticas""><i class="material-icons">insert_chart</i></a></li>
 						</ul>
 					</div>
 				</div>	
@@ -170,10 +194,20 @@
 									</thead>
 									<tbody>
 										<tr>
-											<td colspan="8">
+											<td colspan="8" class="pad">
 												<div class="innerb center">
-													<table class="">
+													<table>
 														<tbody>
+															<tr>
+																<td>1</td>
+																<td>2</td>
+																<td>3</td>
+																<td>4</td>
+																<td>5</td>
+																<td>6</td>
+																<td>7</td>
+																<td>8</td>
+															</tr>
 															<tr>
 																<td>1</td>
 																<td>2</td>
@@ -229,18 +263,35 @@
 						<div class="input-field col s6">
 							<select>
 								<option value="" disabled selected>Selecciona Estatus</option>
-								<option value="1">Option 1</option>
-								<option value="2">Option 2</option>
-								<option value="3">Option 3</option>
+								<option value="1"></option>
+								<option value="2"></option>
 							</select>
 							<label>Estatus</label>
 						</div>
 						<div class="input-field col s6">
 							<select>
 								<option value="" disabled selected>Selecciona Codigo</option>
-								<option value="1">Option 1</option>
-								<option value="2">Option 2</option>
-								<option value="3">Option 3</option>
+								<option value="1">1A (promesa de Pago)</option>
+								<option value="2">3D (Contacto con Titular)</option>
+								<option value="3">3A (Contacto con Familiar)</option>
+								<option value="4">3B (No Contacto)</option>
+								<option value="5">3E (Llamada Entrante)</option>
+								<option value="6">2A (Gestion de Visita)</option>
+								<option value="7">1B (Pago Parcial)</option>
+								<option value="8">1C (Cuenta Liquidada)</option>
+								<option value="9">1D (Pendiente Reactivar)</option>
+								<option value="10">3C (No Gestion)</option>
+								<option value="11">4A (Buzon Voz)</option>
+								<option value="12">4B (Tel No Existe)</option>
+								<option value="13">4C (Tel Suspendido)</option>
+								<option value="14">4D (No Conoce a Titular)</option>
+								<option value="15">4F (Cambio Domicilio)</option>
+								<option value="16">4G (Ilocalizable)</option>
+								<option value="17">4E (A Peticion de Famsa)</option>
+								<option value="18">4H (Dictaminada)</option>
+								<option value="19">4J (No Contesta Predictivo)</option>
+								<option value="20">2B (Segunda Gestion Visita)</option>
+								<option value="21">3F (Tercera Gestion Visita)</option>
 							</select>
 							<label>Codigo</label>
 						</div>
@@ -333,15 +384,14 @@
 			<div id="modal_agendar" class="modal">
 				<div class="modal-content">
 					<h4 class="center">Agendar Llamada</h4>
-					<div class="col l12">
-							<label for="lunch">Dia</label>
-							<input id="lunch" name="fecha" type="text" class="validate datepicker input_modal">
-							<label for="lunch">Hora</label>
-							<input id="lunch" name="fecha" type="text" class="validate timepicker
-							input_modal">
+					<div class="col s12 m12 l12 center">
+						<label for="">Dia</label>
+						<input id="" name="" type="text" class="validate datepicker input_modal">
+						<label for="">Hora</label>
+						<input id="" name="" type="text" class="validate timepicker input_modal">
 					</div>
-					<div class="col s12">
-						 <label for="lunch">Motivo</label>
+					<div class="col s12 m12 l12">
+						<label for="lunch">Motivo</label>
 						<input id="lunch" name="fecha" type="text" class="validate">
 					</div>
 				</div>
@@ -389,11 +439,10 @@
 			</div>
 			<div id="modal_visitas" class="modal">
 				<div class="modal-content">
-					<h4>Modal Header</h4>
-					<p>A bunch of text</p>
+					<h4>Visitas</h4>
 				</div>
 				<div class="modal-footer">
-					<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+					<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
 				</div>
 			</div>
 			<div id="modal_convenios" class="modal">
@@ -450,20 +499,120 @@
 			</div>
 			<div id="modal_diarios" class="modal">
 				<div class="modal-content">
-					<h4>Pagos Diarios</h4>
+					<h4 class="center">Escoge rango de Pagos</h4>
+					<div class="col s12 m12 l12 center">
+						<label for="">Desde</label>
+						<input id="" name="" type="text" class="validate datepicker input_modal">
+						<label for="">Hasta</label>
+						<input id="" name="" type="text" class="validate datepicker input_modal">
+					</div>
 					
 				</div>
 				<div class="modal-footer">
-					<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+					 <a id ="m_tabla_diarios" class="waves-effect waves-light btn  button blue darken-3">Ver pagos Diarios<i class="material-icons left input_modal center">send</i></a>
+				</div>
+			</div>
+			<div id="modal_tabla_diarios" class="modal">
+				<div class="modal-content">
+					<h4>Pagos Diarios</h4>
+					<div class="col s12 right-align">
+						<table class="table highlight">
+							<thead>
+								<tr>
+									<th>Fecha</th>
+									<th>Asignacion</th>
+									<th>Cuenta</th>
+									<th>Vencido</th>
+									<th>Resto Ant</th>
+									<th>Pago</th>
+									<th>Aplica</th>
+									<th>Resto Actual</th>
+								<tr>	
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="8">
+										<div class="innerb center">
+											<table class="">
+												<tbody>
+													<tr>
+														<td>1</td>
+														<td>2</td>
+														<td>3</td>
+														<td>4</td>
+														<td>5</td>
+														<td>6</td>
+														<td>7</td>
+														<td>8</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>		
+				</div>
+				<div class="modal-footer">
+					<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
 				</div>
 			</div>
 			<div id="modal_saldos" class="modal">
 				<div class="modal-content">
-					<h4>Modal Header</h4>
-					<p>A bunch of text</p>
+					<h4>Saldos</h4>
+					<div class="col s12 right-align">
+						<table class="table highlight">
+							<thead>
+								<tr>
+									<th>Region</th>
+									<th>Estatus</th>
+									<th>Numero de Cuentas</th>
+									<th>Ultimo Estatus</th>
+									<th>Grupo</th>
+								<tr>	
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="11">
+										<div class="innerb center">
+											<table class="">
+												<tbody>
+													<tr>
+														<td>1</td>
+														<td>2</td>
+														<td>3</td>
+														<td>4</td>
+														<td>5</td>
+														<td>6</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>		
 				</div>
 				<div class="modal-footer">
-					<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+					<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
+				</div>
+			</div>
+			<div id="modal_estadisticas" class="modal">
+				<div class="modal-content">
+					<h4>Mis Estadisticas</h4>
+				</div>
+				<div class="modal-footer">
+					<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
+				</div>
+			</div>
+			<div id="modal_busqueda" class="modal">
+				<div class="modal-content">
+					
+				</div>
+				<div class="modal-footer">
+					<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
 				</div>
 			</div>
 		</div>	

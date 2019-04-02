@@ -100,12 +100,27 @@ textarea.materialize-textarea {
 	cursor: pointer;
 }
 .input_modal{
-	width: 45% !important;
+	width: 35% !important;
 }
 .icon_menu{
     margin-left: 30%;
 }
 .innerb{
 	overflow: auto;
-	height: 12em;
+	height: 3em !important;
+	max-height: 12em !important;
 }
+.pad{
+	padding: 0px 0px !important;
+}
+.marg_control{
+	margin-top: -24px;
+	padding-bottom: 7px !important;
+}
+.marg_control input[type=text]:not(.browser-default)[readonly="readonly"]+label{
+	color:white;
+}
+.marg_control input[type=text]:not(.browser-default)[readonly="readonly"]{
+	border-bottom: 0px solid #0089ec;
+}
+

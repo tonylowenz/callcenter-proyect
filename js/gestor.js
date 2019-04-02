@@ -27,6 +27,12 @@ $("#reduce").click( function () {
 });
 
 //Intro Modals
+$("#search").keyup(function(e){
+		if (e.keyCode== 13) {
+		$('#modal_busqueda').modal('open');	
+		}
+});
+
 $("#m_bancarias").on("click", () => {
 	$('#modal_bancarias').modal('open');
 });
@@ -40,6 +46,8 @@ $("#m_agendar").on("click", () => {
 });
 $("#m_agenda").on("click", () => {
 	$('#modal_agenda').modal('open');
+	$('#modal_agendar').modal('close');
+
 });
 
 $("#m_visitas").on("click", () => {
@@ -53,9 +61,16 @@ $("#m_convenios").on("click", () => {
 $("#m_diarios").on("click", () => {
 	$('#modal_diarios').modal('open');
 });
+$("#m_tabla_diarios").on("click", () => {
+	$('#modal_tabla_diarios').modal('open');
+	$('#modal_diarios').modal('close');
+});
 
 $("#m_saldos").on("click", () => {
 	$('#modal_saldos').modal('open');
+});
+$("#m_estadisticas").on("click", () => {
+	$('#modal_estadisticas').modal('open');
 });
 
 // End Modals
