@@ -1,0 +1,199 @@
+.table_user {
+    height: 84vh;
+    max-height: 84vh;
+    overflow: auto;
+    border-radius: 4px;
+}
+/* modificaciones del modal */
+.modal {
+    width: 75%;
+    max-height: 85%;
+    border-radius: 1px;
+}
+.image_perfil {
+    visibility: collapse;
+}
+/* ocutar el scroll de overflow actulamente solo funciona en crhome */
+.inner::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background: rgb(255, 255, 255);
+}
+
+.inner::-webkit-scrollbar-thumb {
+    width: 0px;
+    height: 0px;
+    background: rgb(255, 255, 255);
+}
+/* estilos de botonses */
+.btn-flat {
+    background-color: rgba(10, 10, 10, 0.129);
+}
+/* modificaciones de inputs */
+input {
+    font-weight: bold;
+}
+input[type=text]:not(.browser-default) {
+    border-bottom: 1px solid hsla(0, 0%, 76%, 0.336);
+    height: 2rem;
+    color: rgb(70, 70, 70);
+};
+.input-field>label {
+    color: #3a3a3a;
+}
+
+select{
+    height: 2rem;
+}
+
+.tabs {
+    bottom: -58px;
+    background-color: transparent;
+}
+
+.modal .modal-footer {
+    background-color: transparent;
+}
+.cont_img {
+    text-align: center;
+    border: 4px solid white;
+    background-color: rgb(255, 255, 255);
+    background-image: url("../static/image/1360-min.png");
+    background-size: cover;
+    margin-top: 4ch;
+    border-radius: 50%;
+}
+
+.data_user {
+    background-image: linear-gradient(  rgba(244, 245, 246, 0.9),  rgba(244, 245, 246, 0.9));
+    overflow: auto;
+}
+
+.options {
+    margin-top: 1rem;
+}
+.options2 {
+    display: none;
+}
+.options .material-icons {
+    cursor: pointer;
+    margin-left: 1rem;
+}
+.options2 .material-icons {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 26px;
+    background-color: #3a3a3a1e;
+    
+}
+/* modificaciones para pantalla pequeña */
+@media only screen and (max-width: 601px) {
+    .modal .modal-content {
+        padding: 24px 2px;
+    }
+    .btn {
+        font-size: 12px;
+    }
+    .modal {
+        top: 5%;
+        max-height: 85%;
+        width: 90%;
+    }
+    .tabs {
+        bottom: -5px;
+        background-color: transparent;
+    }
+    .cont_img {
+        margin-top: 7ch;
+    }
+    .data_user {
+        background-color:  rgba(0, 0, 0, 0.137);
+        border-radius: 25px 25px 0px 0px;
+    }
+    .fondo {
+        height: 165px !important;
+    }
+    .options {
+        display: none;
+    }
+    .options2 {
+        margin-top: -60px;
+        display: block;
+    }
+}
+.modal .modal-content {
+    padding: 0px 0px;
+}
+.select-wrapper input.select-dropdown {
+    border-bottom: 1px solid hsla(202, 100%, 47%, 0);
+    margin: 0 0 6px 0;
+}
+.fondo {
+    height: 150px;
+    background-image: url("../static/image/f3.jpg");
+    background-size: cover;
+    /* background-color: rgb(33, 56, 119);
+    background-image: linear-gradient(rgb(2,135,180), rgb(1,26,80)); */
+}
+.box_image{
+    color: rgb(58, 58, 58);
+    margin-top: -140px;
+    padding: 0 0.1px !important;
+}
+.row {
+    margin-bottom: 0px;
+}
+table.highlight>tbody>tr:hover {
+    background-color: rgba(27, 221, 255, 0.404);
+    cursor: pointer;
+}
+.input-field {
+    margin-bottom: 0.1rem;
+}
+.input-field .prefix {
+    top: 0;
+}
+
+.flow-text {
+    font-size: 1.3rem;
+}
+.tabs .tab a.active {
+    color: #f8f8f8;
+    border-radius: 50px;
+}
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+    background-color: #dadada5b;
+    outline: none;
+    border-radius: 50px;
+}
+.tabs .tab a {
+    color: rgba(211, 211, 211, 0.7);
+    border-radius: 50px;
+}
+.tabs .indicator{
+    background-color: #ffffff00;
+}
+.tabs .tab a:hover {
+    color: #ffffff;
+}
+.div_btn {
+    margin-bottom: 1rem;
+}
+.options {
+    margin-top: 1rem;
+}
+.options .material-icons {
+    cursor: pointer;
+    margin-left: 1rem;
+}
+/* nav */
+nav {height: 50px;}
+.icon_nav {line-height: 50px !important}
+.search {
+    width: 50% !important;
+    height: 2.3rem !important;
+    margin-left: 25% !important;
+    line-height: 40px !important;
+    border-radius: 25px !important;
+    color: #ffffff !important;
+}

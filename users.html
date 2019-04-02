@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="images/logoSicsa/icon-sicsa.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Users</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/icons-material.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/users.css">
+</head>
+<body>
+    <nav class="grey darken-4" >
+        <div class="nav-wrapper icon_nav">
+            <a href="#!" class="brand-logo left"><i class="material-icons icon_nav icon_menu">menu</i></a>
+            <input class="search center-align grey darken-2" type="text" placeholder="Buscar">
+            <ul class="icon_nav right">
+                <li><a href="mobile.html">12:00</a></li>
+                <li><a href="mobile.html">12:00</a></li>
+                <li><a href="mobile.html">12:00</a></li>
+                <li><a href="mobile.html"><i class="material-icons icon_nav">more_vert</i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row">
+        <div class="col s12 m10 offset-m1">
+            <div id="table_user" class="col s12 m12 table_user z-depth-2 inner">
+                
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal inner">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col s12 fondo">
+                    <div class="col s12 white-text right-align options">
+                        <i class="material-icons modal-close eliminar">delete</i>
+                        <i class="material-icons edit">create</i>
+                        <i class="material-icons save hide">save</i>
+                    </div>
+                    <div class="col s12 m9 offset-m3">
+                        <ul id="tabs-swipe-demo" class="tabs">
+                            <li class="tab col s3"><a class="active" href="#test-swipe-1">Datos</a></li>
+                            <li class="tab col s3"><a href="#test-swipe-2">Archivo</a></li>
+                            <li class="tab col s4"><a href="#test-swipe-3">Contrato</a></li>
+                            <li class="tab col s2 modal-close"><a href="#test-swipe-4">X</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col s12 m3 box_image">
+                    <div class="col s6 offset-s3 m11 offset-m1 cont_img hoverable">
+                        <img class="image_perfil" src="images/1.jpg" alt="" width="85%">
+                    </div>
+                    <div class="col s12 options2">
+                        <div class="col s2">
+                            <i class="modal-close material-icons eliminar">delete</i>
+                        </div>
+                        <div class="col s2 offset-s8">
+                            <i class="material-icons waves-effect edit">create</i>
+                            <i class="material-icons waves-effect save hide">save</i>
+                        </div>
+                    </div>
+                    <h4 class="center col s12 m11 offset-m1"><b id="id_user"></b></h4>
+                    <h6 class="center col s12 m11 offset-m1"><b id="puesto"></b></h6>
+                </div>
+                <div class="col s12 m9 data_user">
+                    
+                    <div id="test-swipe-1" class="col s12">
+                        <div class="input-field col s12 m6">
+                            <i class="material-icons prefix">account_box</i>
+                            <input id="name" type="text" class="validate" readonly placeholder="">
+                            <label for="name">Nombre</label>
+                        </div>
+                        <div class="input-field col s12 m6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="alias" type="text" class="validate" readonly placeholder="">
+                            <label for="alias">Alias</label>
+                        </div>
+                        <div class="input-field col s12 m6">
+                            <i class="material-icons prefix">email</i>
+                            <input id="correo" type="text" class="validate" readonly placeholder="">
+                            <label for="correo">Correo</label>
+                        </div>
+                        <div class="input-field col s12 m6">
+                            <i class="material-icons prefix">person_pin</i>
+                            <input id="jefe" type="text" class="validate" readonly placeholder="">
+                            <label for="jefe">Jefe Inmediato</label>
+                        </div>
+                        <div class="input-field col s6 m6">
+                            <i class="material-icons prefix">assignment_ind</i>
+                            <select id="sexo"></select>
+                            <label>Sexo</label>
+                        </div>
+                        <div class="input-field col s6 m6">
+                            <i class="material-icons prefix">date_range</i>
+                            <input id="f_nacimiento" type="text" class="validate" readonly placeholder="">
+                            <label for="f_nacimiento">Fecha Nacimiento</label>
+                        </div>
+                        <div class="input-field col s6 m6">
+                            <i class="material-icons prefix">portrait</i>
+                            <select id="empleado"></select>
+                            <label>Tipo Empleado</label>
+                        </div>
+                        <div class="input-field col s6 m6">
+                            <i class="material-icons prefix">update</i>
+                            <input id="ingreso" type="text" class="validate" readonly placeholder="">
+                            <label for="ingreso">Ingreso</label>
+                        </div>
+                        <div class="input-field col s6 m6">
+                            <i class="material-icons prefix">call</i>
+                            <input id="telefono" type="text" class="validate" readonly placeholder="">
+                            <label for="telefono">Telefono</label>
+                        </div>
+
+                        <div class="input-field col s6 m6">
+                            <i class="material-icons prefix">phone_iphone</i>
+                            <input id="celular" type="text" class="validate" readonly placeholder="">
+                            <label for="celular">Celular</label>
+                        </div>
+                        <div class="input-field col s6 m6">
+                            <i class="material-icons prefix">location_city</i>
+                            <select id="sucursal"></select>
+                            <label>Sucursal</label>
+                        </div>
+                        <div class="col s12 right-align div_btn">
+                            <a href="#!" class="hide waves-effect waves-teal btn-flat">Actualizar</a>
+                            <a href="#!" class="hide waves-effect waves-red btn-flat">Eliminar</a>
+                        </div>
+
+                    </div>
+                    <div id="test-swipe-2" class="col s12">
+                        <div class="col s12 m4">
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>Acta de Nacimiento</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>IFE</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>Numero del Seguro Social</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>Fotos</span>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="col s12 m4">
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>CURP</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>Comprobante de Estudios</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>Comprobante de Domicilio</span>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="col s12 m4">
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>Carta de Referencia</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>No Infonavit</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>RFC</span>
+                                </label>
+                            </p>
+                        </div>
+                    </div>
+                    <div id="test-swipe-3" class="col s12 green"></div>
+                    <div id="test-swipe-4" class="col s12 green"></div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src=""></script>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+</body>
+
+</html>
