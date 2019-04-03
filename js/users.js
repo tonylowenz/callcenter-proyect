@@ -6,6 +6,9 @@ $(document).ready(function () {
     });
     $('.tabs').tabs();
     $('select').formSelect();
+    $('.datepicker').datepicker({
+        format:"yyyy-mm-dd"
+    });
     select_usuarios('table_user');
 });
 
