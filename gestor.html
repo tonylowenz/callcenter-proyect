@@ -607,6 +607,10 @@
 			<div id="modal_estadisticas" class="modal">
 				<div class="modal-content">
 					<h4>Mis Estadisticas</h4>
+						<div class="outer">
+							<div id="container-speed" class="chart-container"></div>
+							<div id="container-rpm" class="chart-container"></div>
+						</div>
 				</div>
 				<div class="modal-footer">
 					<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
@@ -621,10 +625,13 @@
 				</div>
 			</div>
 		</div>	
-
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/highcharts-more.js"></script>
+		<script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
 		<script src="js/jquery-2.2.4.min.js"></script>
 		<script src="js/materialize.min.js"></script>
 		<script type="text/javascript" src="js/gestor.js"></script>
+
 
 	</body>
 </html>
